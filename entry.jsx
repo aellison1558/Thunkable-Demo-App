@@ -5,7 +5,8 @@ import 'babel-polyfill'
 
 const App = () => (
 	<Provider store={store}>
-		<UserTableContainer/>
+		<TopBar />
+		<AppContainer/>
 	</Provider>
 );
 

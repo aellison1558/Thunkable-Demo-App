@@ -1,5 +1,5 @@
 {
-  "name": "Thunkable Demo App",
+  "name": "ThunkableDemoApp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,6 @@
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
-    "react-csv": "^1.0.8",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "redux": "^3.7.1",

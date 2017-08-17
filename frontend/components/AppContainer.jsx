@@ -1,14 +1,21 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import AppDisplay from './AppDisplay.jsx'
+
+const mapStateToProps = (state, ownProps) => {
+	return {
+		apps: state.apps
+	}
+}
 
 class AppContainer extends React.Component {
 	render() {
 		return(
 			<div>
-				<AppDisplay />
+				<AppDisplay apps={this.props.apps}/>
 			</div>
 		)
 	}
-}
+} 
 
-export default AppContainer;
+export default connect(mapStateToProps)(AppContainer);

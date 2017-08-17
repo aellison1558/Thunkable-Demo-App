@@ -4,10 +4,19 @@ import AppsTableEntry from './AppsTableEntry.jsx'
 
 class AppsTable extends React.Component {
 	render() {
+		const apps = this.props.apps.map((app) => {
+			return(
+				<li>
+					<AppsTableEntry app={app} />
+				</li>
+			)
+		})
 		return(
 			<div>
 				<CreateButton />
-				<AppsTableEntry />
+				<ul>
+					{apps}
+				</ul>
 			</div>
 		)
 	}

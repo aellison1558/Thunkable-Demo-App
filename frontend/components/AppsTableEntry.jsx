@@ -4,7 +4,7 @@ class AppsTableEntry extends React.Component {
 	render() {
 		return(
 			<div>
-				Apps Table Entry
+				{this.props.app.name}
 			</div>
 		)
 	}

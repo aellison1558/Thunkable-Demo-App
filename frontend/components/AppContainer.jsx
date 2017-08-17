@@ -1,10 +1,11 @@
 import React from 'react'
+import AppDisplay from './AppDisplay.jsx'
 
 class AppContainer extends React.Component {
 	render() {
 		return(
 			<div>
-				The App!
+				<AppDisplay />
 			</div>
 		)
 	}

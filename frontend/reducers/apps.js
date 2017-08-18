@@ -4,6 +4,9 @@ const initialState = {
 
 const apps = (state = initialState, action) => {
 	switch (action.type) {
+		case 'ADD_APP':
+			return Object.assign({}, state, {apps: state.apps.concat([action.app])})
+			break;
 		default:
 			return state;
 	}

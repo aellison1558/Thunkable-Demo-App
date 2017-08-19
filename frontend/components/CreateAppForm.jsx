@@ -1,15 +1,19 @@
 import React from 'react'
-import {Button, Modal, OverlayTrigger} from 'react-bootstrap'
+import {Button, Modal, OverlayTrigger, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
 
 class CreateAppForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			showModal: false
+			showModal: false,
+			nameValue: "",
+			imageValue: ""
 		}
 		this.setState = this.setState.bind(this);
 		this.close = this.close.bind(this);
-		this.open = this.open.bind(this)
+		this.open = this.open.bind(this);
+		this.handleNameChange = this.handleNameChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	close() {
@@ -18,6 +22,18 @@ class CreateAppForm extends React.Component {
 
 	open() {
 		this.setState({showModal: true})
+	}
+
+	handleNameChange(e) {
+		e.preventDefault();
+		this.setState({nameValue: e.target.value})
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
+
+		this.props.addApp({name: this.state.nameValue, lastEdited: new Date()});
+		this.setState({showModal: false, nameValue: ""})
 	}
 
 	render() {
@@ -32,9 +48,24 @@ class CreateAppForm extends React.Component {
 			            <Modal.Title>Modal heading</Modal.Title>
 			          </Modal.Header>
 			          <Modal.Body>
-			            <h4>Text in a modal</h4>
-			            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+				            <form>
+						        <FormGroup
+						          controlId="formName"
+						        >
+						          <ControlLabel>App Name</ControlLabel>
+						          <FormControl
+						            type="text"
+						            value={this.state.nameValue}
+						            placeholder="Enter text"
+						            onChange={this.handleNameChange}
+						          />
+						          <FormControl.Feedback />
+						        </FormGroup>
 
+						  		<Button type="submit" onClick={this.handleSubmit}>
+						  			Create App
+						  		</Button>
+						      </form>
 			            </Modal.Body>
 			          <Modal.Footer>
 			            <Button onClick={this.close}>Close</Button>

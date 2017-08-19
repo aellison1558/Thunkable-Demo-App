@@ -14,8 +14,7 @@ class AppsTable extends React.Component {
 		})
 		return(
 			<div>
-				<CreateButton addApp={this.props.addApp} />
-				<CreateAppForm />
+				<CreateAppForm addApp={this.props.addApp}/>
 				<ul>
 					{apps}
 				</ul>

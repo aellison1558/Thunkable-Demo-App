@@ -9,7 +9,6 @@ class CreateAppForm extends React.Component {
 			nameValue: "",
 			imageValue: ""
 		}
-		this.setState = this.setState.bind(this);
 		this.close = this.close.bind(this);
 		this.open = this.open.bind(this);
 		this.handleNameChange = this.handleNameChange.bind(this);

@@ -11,3 +11,11 @@ export const deleteApp = app => {
 		app: app
 	}
 }
+
+export const sortApps = sortField => {
+	return {
+		type: "SORT_APPS",
+		sortField: sortField
+	}
+}
+

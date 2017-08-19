@@ -12,10 +12,14 @@ class SortField extends React.Component {
 		this.handleChange = this.handleChange.bind(this)
 	}
 	handleChange(e) {
-		e.preventDefault()
+		e.preventDefault();
 
-		this.setState({sortBy: e.target.value})
+		this.props.sortApps(e.target.value)
+		this.setState({sortBy: e.target.value});
+		
 	}
+
+	
 
 	render() {
 		return(

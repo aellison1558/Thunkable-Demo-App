@@ -7,7 +7,7 @@ class FilterBar extends React.Component {
 		return(
 			<div>
 				<SearchField />
-				<SortField />
+				<SortField sortApps={this.props.sortApps}/>
 			</div>
 		)
 	}

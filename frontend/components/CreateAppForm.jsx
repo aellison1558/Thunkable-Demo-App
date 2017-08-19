@@ -58,7 +58,6 @@ class CreateAppForm extends React.Component {
 						            placeholder="Enter text"
 						            onChange={this.handleNameChange}
 						          />
-						          <FormControl.Feedback />
 						        </FormGroup>
 
 						  		<Button type="submit" onClick={this.handleSubmit}>

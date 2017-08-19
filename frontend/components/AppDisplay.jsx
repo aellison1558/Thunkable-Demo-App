@@ -39,6 +39,7 @@ class AppDisplay extends React.Component {
 		}
 
 		this.toggleSort = this.toggleSort.bind(this);
+		this.searchApps = this.searchApps.bind(this);
 	}
 
 	componentWillReceiveProps(newProps) {
@@ -60,10 +61,25 @@ class AppDisplay extends React.Component {
 		});
 	}
 
+	searchApps(searchValue) {
+		let newAppsArray = []
+
+		if (searchValue == "") {
+			newAppsArray = this.props.apps;
+		} else {
+			newAppsArray = this.props.apps.filter((app) => {
+				return app.name.match(searchValue);
+			})
+		}
+		this.setState({
+			appsToShow: this.sortApps(this.state.sortField, newAppsArray)
+		})
+	}
+
 	render() {
 		return(
 			<div>
-				<FilterBar toggleSort={this.toggleSort}/>
+				<FilterBar toggleSort={this.toggleSort} searchApps={this.searchApps}/>
 				<AppsTable apps={this.state.appsToShow} addApp={this.props.addApp} deleteApp={this.props.deleteApp}/>
 			</div>
 		)

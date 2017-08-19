@@ -6,7 +6,7 @@ class FilterBar extends React.Component {
 	render() {
 		return(
 			<div>
-				<SearchField />
+				<SearchField searchApps={this.props.searchApps}/>
 				<SortField toggleSort={this.props.toggleSort}/>
 			</div>
 		)

@@ -41,7 +41,7 @@ class CreateAppForm extends React.Component {
 		let close = this.close;
 		return(
 			<div>
-				<Button onClick={this.open}>Open Modal</Button>
+				<Button onClick={this.open}>Create New App</Button>
 
 				<Modal show={showModal} onHide={close}>
 		          <Modal.Header closeButton>

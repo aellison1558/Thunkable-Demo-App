@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Modal, OverlayTrigger, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
+import {Button, Modal, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
 
 class CreateAppForm extends React.Component {
 	constructor(props) {

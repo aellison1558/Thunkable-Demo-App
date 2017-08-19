@@ -14,7 +14,7 @@ class SortField extends React.Component {
 	handleChange(e) {
 		e.preventDefault();
 
-		this.props.sortApps(e.target.value)
+		this.props.toggleSort(e.target.value)
 		this.setState({sortBy: e.target.value});
 		
 	}

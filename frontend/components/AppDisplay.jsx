@@ -7,7 +7,7 @@ class AppDisplay extends React.Component {
 		return(
 			<div>
 				<FilterBar />
-				<AppsTable apps={this.props.apps} addApp={this.props.addApp}/>
+				<AppsTable apps={this.props.apps} addApp={this.props.addApp} deleteApp={this.props.deleteApp}/>
 			</div>
 		)
 	}

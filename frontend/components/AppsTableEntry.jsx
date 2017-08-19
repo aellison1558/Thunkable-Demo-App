@@ -2,9 +2,14 @@ import React from 'react'
 import {Button} from 'react-bootstrap'
 
 class AppsTableEntry extends React.Component {
+	constructor(props) {
+		super(props)
+
+		this.handleDelete = this.handleDelete.bind(this);
+	}
 	handleDelete(e) {
 		e.preventDefault();
-		console.log("deleted");
+		this.props.deleteApp(this.props.app);
 	}
 	render() {
 		return(

@@ -7,7 +7,7 @@ class AppsTable extends React.Component {
 		const apps = this.props.apps.map((app) => {
 			return(
 				<li>
-					<AppsTableEntry app={app} />
+					<AppsTableEntry app={app} deleteApp={this.props.deleteApp} />
 				</li>
 			)
 		})

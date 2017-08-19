@@ -4,3 +4,10 @@ export const addApp = app => {
 		app: app
 	}
 }
+
+export const deleteApp = app => {
+	return {
+		type: "DELETE_APP",
+		app: app
+	}
+}

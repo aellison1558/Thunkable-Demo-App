@@ -25,6 +25,10 @@ class AppsTableEntry extends React.Component {
 		this.setState({showModal: true})
 	}
 
+	download() {
+		window.open("https://itunes.apple.com/us/genre/ios/id36?mt=8");
+	}
+
 	render() {
 		return(
 			<div>
@@ -37,6 +41,10 @@ class AppsTableEntry extends React.Component {
 
 				<Button onClick={this.open}>
 					<img src="./assets/images/delete.png"/>
+				</Button>
+
+				<Button onClick={this.download}>
+					<img src="./assets/images/download.png"/>
 				</Button>
 
 				<Modal show={this.state.showModal} onHide={close}>

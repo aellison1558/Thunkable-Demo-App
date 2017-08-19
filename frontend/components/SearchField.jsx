@@ -29,7 +29,7 @@ class SearchField extends React.Component {
 				<form>
 					<FormGroup controlId="formSearch">
 						<ControlLabel><img src="./assets/images/search.png" /></ControlLabel>
-						<FormControl type="text" value={this.state.searchValue} onChange={this.handleChange} />
+						<FormControl type="text" value={this.state.searchValue} placeholder="Search for apps by name" onChange={this.handleChange} />
 					</FormGroup>
 
 					<Button type="submit" onClick={this.handleSubmit}>

@@ -1,32 +1,8 @@
 const initialState = {
-	apps: [{name: "demo app 1", lastEdited: new Date("August 17, 2017 16:47:00")}]
-}
-
-const sortByName = (apps) => {
-	console.log()
-	return apps.sort((a, b) => {
-		if (a.name < b.name) {
-			return -1
-		} else if (a.name == b.name) {
-			return 0
-		} else {
-			return 1
-		}
-
-	})
-}
-
-const sortByEdit = (apps) => {
-	return apps.sort((a, b) => {
-		if (a.lastEdited < b.lastEdited) {
-			return -1
-		} else if (a.lastEdited == b.lastEdited) {
-			return 0
-		} else {
-			return 1
-		}
-
-	})
+	apps: [
+		{name: "demo app 2", lastEdited: new Date("August 17, 2017 16:47:00")},
+		{name: "app 1", lastEdited: new Date("August 18, 2017 16:47:00")}
+	]
 }
 
 const apps = (state = initialState, action) => {
@@ -45,14 +21,6 @@ const apps = (state = initialState, action) => {
 					return true
 				}
 			})
-			return Object.assign({}, state, {apps: newAppArray})
-			break;
-		case "SORT_APPS":
-			if (action.sortField == "name") {
-				newAppArray = sortByName(state.apps);
-			} else {
-				newAppArray = sortByEdit(state.apps);
-			}
 			return Object.assign({}, state, {apps: newAppArray})
 			break;
 		default:

@@ -10,6 +10,7 @@ class AppsTableEntry extends React.Component {
 		}
 		this.close = this.close.bind(this);
 		this.open = this.open.bind(this);
+		this.download = this.download.bind(this);
 		this.handleDelete = this.handleDelete.bind(this);
 	}
 	handleDelete(e) {
@@ -26,7 +27,7 @@ class AppsTableEntry extends React.Component {
 	}
 
 	download() {
-		window.open("https://itunes.apple.com/us/genre/ios/id36?mt=8");
+		window.open(this.props.app.appStoreURL);
 	}
 
 	render() {
@@ -44,7 +45,7 @@ class AppsTableEntry extends React.Component {
 				</Button>
 
 				<Button onClick={this.download}>
-					<img src="./assets/images/download.png"/>
+					<img src="./assets/images/download.png" />
 				</Button>
 
 				<Modal show={this.state.showModal} onHide={close}>

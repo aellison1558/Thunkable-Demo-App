@@ -7,12 +7,14 @@ class CreateAppForm extends React.Component {
 		this.state = {
 			showModal: false,
 			nameValue: "",
-			imageValue: ""
+			imageValue: "",
+			urlValue: "https://itunes.apple.com/us/genre/ios/id36?mt=8"
 		}
 		this.close = this.close.bind(this);
 		this.open = this.open.bind(this);
 		this.handleNameChange = this.handleNameChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleURLChange = this.handleURLChange.bind(this);
 	}
 
 	close() {
@@ -28,10 +30,15 @@ class CreateAppForm extends React.Component {
 		this.setState({nameValue: e.target.value})
 	}
 
+	handleURLChange(e) {
+		e.preventDefault();
+		this.setState({urlValue: e.target.value})
+	}
+
 	handleSubmit(e) {
 		e.preventDefault();
 
-		this.props.addApp({name: this.state.nameValue, lastEdited: new Date()});
+		this.props.addApp({name: this.state.nameValue, lastEdited: new Date(), appStoreURL: this.state.urlValue});
 		this.setState({showModal: false, nameValue: ""})
 	}
 
@@ -57,6 +64,17 @@ class CreateAppForm extends React.Component {
 						            value={this.state.nameValue}
 						            placeholder="Enter text"
 						            onChange={this.handleNameChange}
+						          />
+						        </FormGroup>
+
+						        <FormGroup
+						          controlId="formURL"
+						        >
+						          <ControlLabel>URL to App in App Store</ControlLabel>
+						          <FormControl
+						            type="text"
+						            value={this.state.urlValue}
+						            onChange={this.handleURLChange}
 						          />
 						        </FormGroup>
 

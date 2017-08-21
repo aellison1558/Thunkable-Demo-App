@@ -1,6 +1,6 @@
-import React from 'react'
-import AppsTableEntry from './AppsTableEntry.jsx'
-import CreateAppForm from './CreateAppForm.jsx'
+import React from 'react';
+import AppsTableEntry from './AppsTableEntry.jsx';
+import CreateAppForm from './CreateAppForm.jsx';
 
 class AppsTable extends React.Component {
 	render() {
@@ -9,8 +9,8 @@ class AppsTable extends React.Component {
 				<li>
 					<AppsTableEntry app={app} deleteApp={this.props.deleteApp} />
 				</li>
-			)
-		})
+			);
+		});
 		return(
 			<div className='app-table'>
 				
@@ -23,8 +23,8 @@ class AppsTable extends React.Component {
 					{apps}
 				</ul>
 			</div>
-		)
+		);
 	}
-}
+};
 
 export default AppsTable;

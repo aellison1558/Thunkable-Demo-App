@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class TopBar extends React.Component {
 	render() {
@@ -11,8 +11,8 @@ class TopBar extends React.Component {
 					<img src="./assets/images/setting icon.png" />
 				</div>
 			</div>
-		)
+		);
 	}
-}
+};
 
 export default TopBar;

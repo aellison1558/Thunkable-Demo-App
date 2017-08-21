@@ -3,7 +3,7 @@ const initialState = {
 		{name: "demo app 2", lastEdited: new Date("August 17, 2017 16:47:00"), appStoreURL: "https://itunes.apple.com/us/genre/ios/id36?mt=8"},
 		{name: "app 1", lastEdited: new Date("August 18, 2017 16:47:00"), appStoreURL: "https://itunes.apple.com/us/genre/ios/id36?mt=8"}
 	]
-}
+};
 
 const apps = (state = initialState, action) => {
 	let newAppArray;
@@ -26,6 +26,6 @@ const apps = (state = initialState, action) => {
 		default:
 			return state;
 	}
-}
+};
 
 export default apps;

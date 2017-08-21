@@ -1,5 +1,5 @@
-import React from 'react'
-import {Button, Modal} from 'react-bootstrap'
+import React from 'react';
+import {Button, Modal} from 'react-bootstrap';
 
 class AppsTableEntry extends React.Component {
 	constructor(props) {
@@ -7,7 +7,7 @@ class AppsTableEntry extends React.Component {
 
 		this.state = {
 			showModal: false
-		}
+		};
 		this.close = this.close.bind(this);
 		this.open = this.open.bind(this);
 		this.download = this.download.bind(this);
@@ -19,11 +19,11 @@ class AppsTableEntry extends React.Component {
 	}
 
 	close() {
-		this.setState({showModal: false})
+		this.setState({showModal: false});
 	}
 
 	open() {
-		this.setState({showModal: true})
+		this.setState({showModal: true});
 	}
 
 	download() {
@@ -59,8 +59,8 @@ class AppsTableEntry extends React.Component {
 		            
 		        </Modal>
 			</div>
-		)
-	}
+		);
+	};
 }
 
 export default AppsTableEntry;

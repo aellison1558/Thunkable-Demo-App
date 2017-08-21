@@ -1,20 +1,20 @@
-import React from 'react'
-import {form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
+import React from 'react';
+import {form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 
 class SortField extends React.Component {
 	constructor(props) {
-		super(props)
+		super(props);
 
 		this.state = {
 			sortBy: "lastEdit"
-		}
+		};
 
-		this.handleChange = this.handleChange.bind(this)
+		this.handleChange = this.handleChange.bind(this);
 	}
 	handleChange(e) {
 		e.preventDefault();
 
-		this.props.toggleSort(e.target.value)
+		this.props.toggleSort(e.target.value);
 		this.setState({sortBy: e.target.value});
 		
 	}
@@ -34,8 +34,8 @@ class SortField extends React.Component {
 					</FormGroup>
 				</form>
 			</div>
-		)
-	}
+		);
+	};
 }
 
 export default SortField;

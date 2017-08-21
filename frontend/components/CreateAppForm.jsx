@@ -1,12 +1,12 @@
-import React from 'react'
-import {Button, Modal, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
+import React from 'react';
+import {Button, Modal, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 
 function imageExists(url, callback) {
   var img = new Image();
   img.onload = function() { callback(true); };
   img.onerror = function() { callback(false); };
   img.src = url;
-}
+};
 
 class CreateAppForm extends React.Component {
 	constructor(props) {
@@ -16,7 +16,7 @@ class CreateAppForm extends React.Component {
 			nameValue: "",
 			imageValue: "",
 			urlValue: "https://itunes.apple.com/us/genre/ios/id36?mt=8"
-		}
+		};
 		this.close = this.close.bind(this);
 		this.open = this.open.bind(this);
 		this.handleNameChange = this.handleNameChange.bind(this);
@@ -61,7 +61,7 @@ class CreateAppForm extends React.Component {
 
 			this.props.addApp(app);
 			this.setState({showModal: false, nameValue: "", urlValue: "",imageValue: ""});
-		}.bind(this))
+		}.bind(this));
 
 		
 	}
@@ -133,8 +133,8 @@ class CreateAppForm extends React.Component {
 			</div>
 			
 
-		)
+		);
 	}
-}
+};
 
 export default CreateAppForm;

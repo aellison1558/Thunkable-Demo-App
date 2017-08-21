@@ -1,14 +1,14 @@
-import React from 'react'
-import {Button, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
+import React from 'react';
+import {Button, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 
 class SearchField extends React.Component {
 	constructor(props) {
-		super(props)
+		super(props);
 
 		this.state = {
 			searchValue: "",
 			show: false
-		}
+		};
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +27,7 @@ class SearchField extends React.Component {
 	}
 
 	show() {
-		this.setState({show: !this.state.show})
+		this.setState({show: !this.state.show});
 	}
 
 	render() {
@@ -44,8 +44,8 @@ class SearchField extends React.Component {
 					
 				</form>
 			</div>
-		)
+		);
 	}
-}
+};
 
 export default SearchField;

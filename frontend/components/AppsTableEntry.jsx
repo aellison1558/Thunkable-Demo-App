@@ -32,7 +32,7 @@ class AppsTableEntry extends React.Component {
 
 	render() {
 		return(
-			<div>
+			<div className="app-detail">
 				<div className="app-detail-name">
 					{this.props.app.name}
 				</div>

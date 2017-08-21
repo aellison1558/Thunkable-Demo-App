@@ -1,0 +1,123 @@
+.app {
+	background-image: linear-gradient(to left, #fcf5f5, #f0f2ff);
+	height: 100vh;
+	font-family: OpenSans;
+  font-size: 20px;
+  text-align: center;
+  color: #5d5d5d;
+}
+
+/*top bar*/
+
+.top-bar {
+  width: 100%;
+  height: 70px;
+  background-image: linear-gradient(to left, #ffffff, #f2f3f5);
+  float: left;
+  border: solid 1px #d8d8d8;
+}
+
+.top-bar-beaver {
+	float: left;
+  width: 70px;
+  height: 68px;
+  opacity: 0.69;
+  background-color: #ffffff;
+}
+
+.top-bar-beaver img {
+	height: 68px;
+}
+
+.top-bar-setting {
+	float: right;
+	width: 68px;
+  height: 70px;
+  padding-top: 15px;
+}
+
+/*display*/
+
+.app-display {
+	padding-left: 115px;
+	padding-right: 115px;
+}
+
+/*filter bar*/
+
+.filter-bar {
+	width: 100%;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.search-field {
+	float: left;
+}
+
+.search-field form {
+	display: inline;
+}
+
+.search-field div {
+	display: inline
+}
+
+.search-input-field {
+	width: 200px;
+	display: inline;
+}
+
+.sort-field {
+	float: right;
+}
+
+.sort-field div {
+	display: inline;
+}
+
+.sort-field form {
+	display: inline;
+}
+
+.sort-field select {
+	display: inline;
+	width: 132px;
+}
+
+.sort-field label {
+	padding-right: 5px;
+}
+
+/*app table*/
+
+.new-app-box {
+	padding-top: 66px;
+}
+
+.new-app-icon {
+	margin-bottom: 39px;
+}
+
+/*app detail*/
+
+ul {
+	margin-left: -55px;
+	margin-right: -55px;
+}
+
+li {
+	list-style-type: none;
+	float: left;
+	margin: 15px;
+}
+
+.app-detail {
+	float: left;
+	width: 270px;
+  height: 250px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+}

@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => {
 class AppContainer extends React.Component {
 	render() {
 		return(
-			<div>
+			<div className="app-container">
 				<AppDisplay apps={this.props.apps} addApp={this.props.addApp} deleteApp={this.props.deleteApp}/>
 			</div>
 		)

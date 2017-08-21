@@ -5,7 +5,7 @@ import SortField from './SortField.jsx'
 class FilterBar extends React.Component {
 	render() {
 		return(
-			<div>
+			<div className="filter-bar">
 				<SearchField searchApps={this.props.searchApps}/>
 				<SortField toggleSort={this.props.toggleSort}/>
 			</div>

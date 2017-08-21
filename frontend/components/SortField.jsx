@@ -23,7 +23,7 @@ class SortField extends React.Component {
 
 	render() {
 		return(
-			<div>
+			<div className="sort-field">
 				<form>
 					<FormGroup controlId="formSort">
 						<ControlLabel>Sort by:</ControlLabel>

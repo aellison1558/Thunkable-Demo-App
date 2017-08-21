@@ -12,9 +12,14 @@ class AppsTable extends React.Component {
 			)
 		})
 		return(
-			<div>
-				<CreateAppForm addApp={this.props.addApp}/>
+			<div className='app-table'>
+				
 				<ul>
+					<li>
+						<div className="app-detail">
+							<CreateAppForm addApp={this.props.addApp}/>
+						</div>
+					</li>
 					{apps}
 				</ul>
 			</div>

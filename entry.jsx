@@ -8,7 +8,7 @@ import store from './frontend/store.js'
 
 const App = () => (
 	<Provider store={store}>
-		<div>
+		<div className='app'>
 			<TopBar />
 			<AppContainer/>
 		</div>

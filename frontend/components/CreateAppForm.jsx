@@ -46,8 +46,15 @@ class CreateAppForm extends React.Component {
 		let showModal = this.state.showModal;
 		let close = this.close;
 		return(
-			<div>
-				<Button onClick={this.open}>Create New App</Button>
+			<div onClick={this.open}>
+				<div className="new-app-box">
+					<div className="new-app-icon">
+						<img src="./assets/images/plus .png"/>
+					</div>
+					<div>
+						Create New App
+					</div>
+				</div>
 
 				<Modal show={showModal} onHide={close}>
 		          <Modal.Header closeButton>

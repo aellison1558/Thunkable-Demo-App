@@ -6,11 +6,13 @@ class SearchField extends React.Component {
 		super(props)
 
 		this.state = {
-			searchValue: ""
+			searchValue: "",
+			show: false
 		}
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.show = this.show.bind(this);
 	}
 
 	handleChange(e) {
@@ -23,18 +25,23 @@ class SearchField extends React.Component {
 
 		this.props.searchApps(this.state.searchValue);
 	}
+
+	show() {
+		this.setState({show: !this.state.show})
+	}
+
 	render() {
 		return(
-			<div>
+			<div className="search-field">
 				<form>
 					<FormGroup controlId="formSearch">
-						<ControlLabel><img src="./assets/images/search.png" /></ControlLabel>
-						<FormControl type="text" value={this.state.searchValue} placeholder="Search for apps by name" onChange={this.handleChange} />
+						<ControlLabel onClick={this.show}><img src="./assets/images/search.png" /></ControlLabel>
+						{this.state.show ? <FormControl className="search-input-field" type="text" value={this.state.searchValue} placeholder="Search for apps by name" onChange={this.handleChange} /> : null}
+						
 					</FormGroup>
 
-					<Button type="submit" onClick={this.handleSubmit}>
-			  			Search
-			  		</Button>
+					{this.state.show ? <Button type="submit" onClick={this.handleSubmit}>Search</Button> : null}
+					
 				</form>
 			</div>
 		)

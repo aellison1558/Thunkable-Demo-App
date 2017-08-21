@@ -78,7 +78,7 @@ class AppDisplay extends React.Component {
 
 	render() {
 		return(
-			<div>
+			<div className="app-display">
 				<FilterBar toggleSort={this.toggleSort} searchApps={this.searchApps}/>
 				<AppsTable apps={this.state.appsToShow} addApp={this.props.addApp} deleteApp={this.props.deleteApp}/>
 			</div>

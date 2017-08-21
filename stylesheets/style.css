@@ -120,4 +120,15 @@ li {
   border-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+  padding-top: 26.9px;
+  padding-bottom: 14px; 
+}
+
+#create-new-app-detail {
+	padding: 0px;
+}
+
+.app-detail-edited {
+  font-size: 14px;
+  color: #c6c6c6;
 }

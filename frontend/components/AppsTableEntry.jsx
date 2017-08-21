@@ -33,20 +33,20 @@ class AppsTableEntry extends React.Component {
 	render() {
 		return(
 			<div className="app-detail">
+				<div className="app-detail-image">
+					<img src={this.props.app.imageURL ? this.props.app.imageURL : "./assets/images/defaut icon.png"} />
+				</div>
 				<div className="app-detail-name">
 					{this.props.app.name}
 				</div>
 				<div className="app-detail-edited">
-					{this.props.app.lastEdited.toString()}
+					Last Edit: {this.props.app.lastEdited.toLocaleDateString()}
 				</div>
 
-				<Button onClick={this.open}>
-					<img src="./assets/images/delete.png"/>
-				</Button>
-
-				<Button onClick={this.download}>
-					<img src="./assets/images/download.png" />
-				</Button>
+				<div >
+					<img onClick={this.open} src="./assets/images/delete.png"/>
+					<img onClick={this.download} src="./assets/images/download.png" />
+				</div>
 
 				<Modal show={this.state.showModal} onHide={close}>
 		          <Modal.Header closeButton>

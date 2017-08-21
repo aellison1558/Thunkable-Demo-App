@@ -1,6 +1,13 @@
 import React from 'react'
 import {Button, Modal, form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
 
+function imageExists(url, callback) {
+  var img = new Image();
+  img.onload = function() { callback(true); };
+  img.onerror = function() { callback(false); };
+  img.src = url;
+}
+
 class CreateAppForm extends React.Component {
 	constructor(props) {
 		super(props);
@@ -15,31 +22,48 @@ class CreateAppForm extends React.Component {
 		this.handleNameChange = this.handleNameChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleURLChange = this.handleURLChange.bind(this);
+		this.handleImageChange = this.handleImageChange.bind(this);
 	}
 
 	close() {
-		this.setState({showModal: false})
+		this.setState({showModal: false});
 	}
 
 	open() {
-		this.setState({showModal: true})
+		this.setState({showModal: true});
 	}
 
 	handleNameChange(e) {
 		e.preventDefault();
-		this.setState({nameValue: e.target.value})
+		this.setState({nameValue: e.target.value});
 	}
 
 	handleURLChange(e) {
 		e.preventDefault();
-		this.setState({urlValue: e.target.value})
+		this.setState({urlValue: e.target.value});
+	}
+
+	handleImageChange(e) {
+		e.preventDefault();
+		this.setState({imageValue: e.target.value});
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
+		let app = {name: this.state.nameValue, lastEdited: new Date(), appStoreURL: this.state.urlValue, imageURL: ""};
+		let imageValue = this.state.imageValue;
 
-		this.props.addApp({name: this.state.nameValue, lastEdited: new Date(), appStoreURL: this.state.urlValue});
-		this.setState({showModal: false, nameValue: ""})
+		imageExists(imageValue, function(exists) {
+			if (exists) {
+				app.imageURL = imageValue;
+			}
+
+
+			this.props.addApp(app);
+			this.setState({showModal: false, nameValue: "", urlValue: "",imageValue: ""});
+		}.bind(this))
+
+		
 	}
 
 	render() {
@@ -82,6 +106,18 @@ class CreateAppForm extends React.Component {
 						            type="text"
 						            value={this.state.urlValue}
 						            onChange={this.handleURLChange}
+						          />
+						        </FormGroup>
+
+						        <FormGroup
+						          controlId="formImage"
+						        >
+						          <ControlLabel>URL to App Image (leave blank for default)</ControlLabel>
+						          <FormControl
+						            type="text"
+						            value={this.state.imageValue}
+						            placeholder="Enter url"
+						            onChange={this.handleImageChange}
 						          />
 						        </FormGroup>
 

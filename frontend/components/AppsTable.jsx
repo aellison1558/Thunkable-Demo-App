@@ -16,7 +16,7 @@ class AppsTable extends React.Component {
 				
 				<ul>
 					<li>
-						<div className="app-detail">
+						<div className="app-detail" id="create-new-app-detail">
 							<CreateAppForm addApp={this.props.addApp}/>
 						</div>
 					</li>

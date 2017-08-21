@@ -43,15 +43,12 @@ class AppsTableEntry extends React.Component {
 					Last Edit: {this.props.app.lastEdited.toLocaleDateString()}
 				</div>
 
-				<div >
+				<div>
 					<img onClick={this.open} src="./assets/images/delete.png"/>
 					<img onClick={this.download} src="./assets/images/download.png" />
 				</div>
 
 				<Modal show={this.state.showModal} onHide={close}>
-		          <Modal.Header closeButton>
-		            <Modal.Title>Modal heading</Modal.Title>
-		          </Modal.Header>
 		          <Modal.Body>
 		            Are you sure you want to delete {this.props.app.name}?
 

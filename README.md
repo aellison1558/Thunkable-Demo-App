@@ -7,8 +7,8 @@ Demo App for Thunkable coding exercise
 
 -navigate to project directory in terminal  
 
--'npm install' to ensure necessary libraries are installed  
+-run 'npm install' in terminal to ensure necessary libraries are installed  
 
--'webpack' to bundle javascript code  
+-run 'webpack' in terminal to bundle javascript code  
 
--'open index.html' to open and view project in your default browser
+-run 'open index.html' in terminal to open and view project in your default browser
